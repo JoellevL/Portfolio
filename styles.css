@@ -1,0 +1,78 @@
+ body{
+    width: 80%;
+    margin: auto;
+    background-color: #FFD9C0;
+}
+
+header{
+    text-align: center;
+}
+h1, h2, h3, .text-body-emphasis, .text-primary {
+    color: #ff69b4 !important;
+}
+.border-bottom {
+    border-bottom: 3px solid #ff69b4 !important;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+nav > ul > li > a{
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+}
+
+.circle-photo {
+    border-radius: 50% !important;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border: 8px solid white;
+}
+.barbie-btn {
+    background: linear-gradient(180deg, #ff69b4 0%, #e0218a 100%);
+    color: white !important;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.barbie-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(224, 33, 138, 0.6);
+}
+
+.barbie-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    transition: all 0.5s;
+    pointer-events: none;
+}
+
+.barbie-btn:hover::after {
+    left: 120%;
+}
+
