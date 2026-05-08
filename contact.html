@@ -1,39 +1,105 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-        <link href="styles.css" rel="stylesheet">
-        <title>Jo.vL</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Joëlle van Lente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #f8f9fa; color: #333; }
+        .navbar { background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,.1); }
+        .contact-header { padding: 80px 0 40px; background: #343a40; color: white; margin-bottom: 50px; }
+        .contact-card { border: none; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; }
+        .social-link { font-size: 1.2rem; transition: transform 0.3s ease; text-decoration: none; display: flex; align-items: center; margin-bottom: 15px; }
+        .social-link:hover { transform: translateX(10px); }
+        .social-link i { font-size: 1.5rem; margin-right: 15px; }
+        .linkedin { color: #0077b5; }
+        .github { color: #333; }
+        footer { padding: 40px 0; background: #343a40; color: #adb5bd; margin-top: 50px; }
+    </style>
+</head>
+<body>
 
-    </head>
-    <body>
-        <header>
-            <h1>Joëlle van Lammeren</h1>
-            <nav>
-                <div class="container-fluid">
-                     <ul class="navbar-nav mx-auto d-flex flex-row justify-content-center w-100">
-                         <li class="nav-item px-3"><a class="nav-link barbie-pink" href="index.html">Home</a></li>
-                         <li class="nav-item px-3"><a class="nav-link barbie-pink" href="./myjourney.html">My Journey</a></li>
-                        <li class="nav-item px-3"><a class="nav-link barbie-pink" href="./projects.html">Projects</a></li>
-                       <li class="nav-item px-3"><a class="nav-link barbie-pink" href="./contact.html">Contact</a></li>
-                     </ul>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Joëlle van Lente</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="contact-header text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Get In Touch</h1>
+            <p class="lead">Let's connect and discuss how we can work together.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card contact-card">
+                    <div class="row g-0">
+                        <div class="col-md-6 p-5">
+                            <h2 class="h3 mb-4">About Me</h2>
+                            <p class="text-muted">
+                                Hello! I am Joëlle, a driven developer currently completing the CS50x program by Harvard University.
+                                I have a strong foundation in C, Python, and SQL, and I am passionate about building clean,
+                                efficient web applications that solve real-world problems. I am always looking for new challenges
+                                and opportunities to learn and grow in the tech industry.
+                            </p>
+                            <p class="text-muted">
+                                Whether you have a question about my projects or just want to say hi, feel free to reach out via
+                                the form or connect with me on professional platforms!
+                            </p>
+                        </div>
+                        <div class="col-md-6 p-5 bg-light">
+                            <h2 class="h3 mb-4">Connect</h2>
+
+                            <a href="https://www.linkedin.com/in/joelle-van-lente-693892314/" class="social-link linkedin" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn Profile</span>
+                            </a>
+
+                            <a href="https://github.com/joellevl" class="social-link github" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub Projects</span>
+                            </a>
+
+                            <hr class="my-4">
+
+                            <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+                                <div class="mb-3">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" name="email" class="form-control" placeholder="name@example.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Message</label>
+                                    <textarea name="message" class="form-control" rows="3" placeholder="How can I help you?" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-dark w-100">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-            </nav>
-        </header>
-        <main>
-            <section>
-                <h1>Contact</h1>
-                <br>
-                <p>You can contact me by sening an e-mail to:</p>
-                <br>
-                <u><em>joellevanlammeren@gmail.com</em></u>
+            </div>
+        </div>
+    </main>
 
-            </section>
-        </main>
-        <footer>
-            Copyright - Joëlle.vL.2026
-        </footer>
-    </body>
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2026 Joëlle van Lente. Built with passion and CS50 knowledge.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
